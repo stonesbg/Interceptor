@@ -1,0 +1,78 @@
+﻿<Interceptor>
+  <Services>
+    <Service Name="Authorization">
+      <HttpMethod>GET</HttpMethod>
+      <Response>true</Response>
+      <Url>*/api/Authorization</Url>
+    </Service>
+    <Service Name="ResourceNavigation">
+      <HttpMethod>GET</HttpMethod>
+      <Response Type="file"></Response>
+      <Url>*/api/ResourceNavigation</Url>
+    </Service>
+    <Service Name="DataInstance">
+      <HttpMethod>GET</HttpMethod>
+      <Response Type="file">ResourceNavigation.json</Response>
+      <Url>*/api/DataInstance</Url>
+    </Service>
+    <Service Name="DataSource">
+      <HttpMethod>GET</HttpMethod>
+      <Response Type="file">DataSource.json</Response>
+      <Url>*/api/DataSource</Url>
+    </Service>
+    <Service Name="Job">
+      <HttpMethod>GET</HttpMethod>
+      <Response Type="file">Job.json</Response>
+      <Url>*/api/Job</Url>
+    </Service>
+    <Service Name="Job_Status">
+      <HttpMethod>GET</HttpMethod>
+      <Response Type="file">Job_Status.json</Response>
+      <Url>*/api/Job/Status</Url>
+    </Service>
+    <Service Name="JobType">
+      <HttpMethod>GET</HttpMethod>
+      <Response Type="file">JobType.json</Response>
+      <Url>*/api/JobType</Url>
+    </Service>
+    <Service Name="SystemParameters">
+      <HttpMethod>GET</HttpMethod>
+      <Response Type="file">SystemParameters.json</Response>
+      <Url>*/api/SystemParameters</Url>
+    </Service>
+    <Service Name="ScorecardTimeslice">
+      <HttpMethod>GET</HttpMethod>
+      <Response Type="file">ScorecardTimeslice.json</Response>
+      <Url>*/api/ScorecardTimeslice</Url>
+    </Service>
+    <Service Name="OrgDetails">
+      <HttpMethod>GET</HttpMethod>
+      <Response Type="file">OrgDetails.json</Response>
+      <Url>*/api/Scorecard/OrgDetails</Url>
+    </Service>
+    <Service Name="Metrics">
+      <HttpMethod>GET</HttpMethod>
+      <Response Type="file">Metrics.json</Response>
+      <Url>*/api/Scorecard/2/Week/Team/Metrics*</Url>
+    </Service>
+    <Service Name="CoachingAssignment_Agent">
+      <HttpMethod>GET</HttpMethod>
+      <Response Type="file">768.json</Response>
+      <Url>*/api/CoachingAssignment/Agent/768</Url>
+    </Service>
+    <Service Name="CoachingAssignment_Impact">
+      <HttpMethod>GET</HttpMethod>
+      <Response Type="file">impact.json</Response>
+      <Url>*/api/CoachingAssignment/Agent/768</Url>
+    </Service>
+    <!-- WFM UrlS-->
+    <!--<Service Name="GetAllowedModules">
+      <HttpMethod>GET</HttpMethod>
+      <Response Type="file"></Response>
+      <Url>*/api/CoachingAssignment/6697/impact</Url>
+    </Service>-->
+
+    <!-- END WFM UrlS-->
+  </Services>
+
+</Interceptor>
