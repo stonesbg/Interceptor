@@ -33,7 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FiddlerCore4">
-      <HintPath>..\..\..\..\..\Desktop\FiddlerCoreAPI\DotNet4\FiddlerCore4.dll</HintPath>
+      <HintPath>..\Third Party\Fiddler\FiddlerCore4.dll</HintPath>
     </Reference>
     <Reference Include="NLog">
       <HintPath>..\packages\NLog.2.1.0\lib\net45\NLog.dll</HintPath>
@@ -61,7 +61,6 @@
     </None>
     <None Include="Json\768.json" />
     <None Include="Json\impact.json" />
-    <None Include="Json\ResourceNavigation_Old.json" />
     <None Include="Json\Metrics.json" />
     <None Include="Json\GetAllowedModules.json" />
     <None Include="Json\DataSource.json" />
@@ -76,7 +75,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="config.xml" />
+    <Content Include="config.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

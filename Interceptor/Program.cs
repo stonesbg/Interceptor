@@ -183,12 +183,15 @@ namespace Interceptor
         private static string LoadJsonFile(string path)
         {
             var sb = new StringBuilder();
-            using (var sr = new StreamReader(path, Encoding.GetEncoding("iso-8859-1")))
+            if(File.Exists(path))
             {
-                string line;
-                while ((line = sr.ReadLine()) != null)
+                using (var sr = new StreamReader(path, Encoding.GetEncoding("iso-8859-1")))
                 {
-                    sb.AppendLine(line);
+                    string line;
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        sb.AppendLine(line);
+                    }
                 }
             }
 
